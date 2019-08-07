@@ -1,6 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext");
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { width: 100%; font-family: 'Montserrat', sans-serif; }
+
+.header { height: 100vh; background: #ccc; background-image: url("../images/city.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; overflow: hidden; text-transform: uppercase; }
+
+.header__menu { background: rgba(0, 0, 0, 0.6); }
+
+.header__list { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; list-style: none; }
+
+.header__item { margin: 10px 20px; }
+
+.header__link { position: relative; font-size: 20px; text-decoration: none; color: #fff; }
+
+.header__link::after { content: ""; position: absolute; display: block; width: 0; height: 5px; top: 100%; left: 0; background: #cf1c24; opacity: 1; transition: 0.5s; }
+
+.header__link:hover:after { width: 50%; transform: translateX(100%); }
+
+.header__box-slogan { position: absolute; width: 1000px; top: 65%; left: 50%; transform: translate(-50%, -65%); text-align: center; letter-spacing: 1px; color: #fff; padding: 5px 10px; }
+
+.header__title-h1 { font-size: 70px; }
+
+.header__title-h2 { font-size: 45px; color: #fff; }
+
+.header__box-icon { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 55px; height: 55px; margin: auto; margin-top: 20px; border: 2px solid #fff; border-radius: 50%; }
+
+.header__link-git { padding: 5px; }
+
+.header__icon-git { font-size: 40px; color: #fff; transition: 0.7s; }
+
+.header__icon-git:hover { transform: rotateY(360deg); }

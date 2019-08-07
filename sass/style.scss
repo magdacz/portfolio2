@@ -1,6 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext');
+
+$color-primary: #fff;
+$color-second: #cf1c24;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+	height: 100vh;
+	background: #ccc;
+	background-image: url('../images/city.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	text-transform: uppercase;
+
+	&__menu {
+		background: rgba(0, 0, 0, 0.6);
+	}
+	
+	&__list {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+	}
+	
+	&__item {
+		margin: 10px 20px;
+	}
+	
+	&__link {
+		position: relative;
+		font-size: 20px;
+		text-decoration: none;
+		color: $color-primary;
+		
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 5px;
+			top: 100%;
+			left: 0;
+			background: $color-second;
+			opacity: 1;
+			transition: 0.5s;
+		}
+	
+		&:hover {
+			&:after {
+				width: 50%;
+				transform: translateX(100%);
+			}
+		}
+	}
+	
+	&__box-slogan {
+		position: absolute;
+		width: 1000px;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%, -65%);
+		text-align: center;
+		letter-spacing: 1px;
+		color: $color-primary;
+		padding: 5px 10px;
+	}
+	
+	&__title-h1 {
+		font-size: 70px;
+	}
+	
+	&__title-h2 {
+		font-size: 45px;
+		color: $color-primary;
+	}
+	
+	&__box-icon {
+		@include flex-center;
+		width: 55px;
+		height: 55px;
+		margin: auto;
+		margin-top: 20px;
+		border: 2px solid $color-primary;
+		border-radius: 50%;
+	}
+	
+	&__link-git {
+		padding: 5px;
+	}
+	
+	&__icon-git {
+		font-size: 40px;
+		color: $color-primary;
+		transition: 0.7s;
+		
+		&:hover {
+			transform: rotateY(360deg);
+		}
+	}
 }
 
