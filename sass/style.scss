@@ -3,11 +3,21 @@
 $color-primary: #fff;
 $color-second: #cf1c24;
 
+$padding: 100px 0;
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@mixin title1 {
+	text-align: center;
+	font-size: 30px;
+    text-transform: uppercase;
+}
+
+
 
 * {
 	margin: 0;
@@ -20,6 +30,12 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+//HEADER
 .header {
 	height: 100vh;
 	background: #ccc;
@@ -32,6 +48,7 @@ body {
 
 	&__menu {
 		background: rgba(0, 0, 0, 0.6);
+		padding: 10px 0;
 	}
 	
 	&__list {
@@ -85,6 +102,7 @@ body {
 	
 	&__title-h1 {
 		font-size: 70px;
+		line-height: 1;
 	}
 	
 	&__title-h2 {
@@ -117,3 +135,87 @@ body {
 	}
 }
 
+//ABOUT ME
+.about-me {
+	background: #7A7A7A;
+	color: $color-primary;
+	padding: $padding;
+	
+	&__title-h1 {
+		@include title1;
+		padding-bottom: 40px;
+	}
+	
+	&__container {
+	}
+	
+	&__box-text {
+		max-width: 700px;
+		line-height: 1.75;
+		margin: auto;
+		
+	}
+	
+	&__text {
+		font-size: 18px;
+	}
+}
+
+//TECHNOLOGIES
+.technologies {
+	padding: $padding;
+	
+	&__title-h1 {
+		@include title1;
+	}
+	
+	&__title-h2 {
+		font-size: 22px;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
+	
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 20px;
+	}
+	
+	&__box-icon {
+		text-align: center;
+		padding: 20px 30px;
+	}
+	
+	&__icon {
+		font-size: 80px;
+		padding: 5px 0;
+		
+		&--html5 {
+			color: #E44D26;
+		}
+		
+		&--css3 {
+			color: #3595CF;
+		}
+		
+		&--js {
+			color: #E8D44D;
+		}
+		
+		&--sass {
+			color: #C66394;
+		}
+		
+		&--git {
+			color: #E84D31;
+		}
+		
+		&--react {
+			color: #61DAFB;
+		}
+	}
+	
+	&__title-icon {}
+}

@@ -1,32 +1,205 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext");
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body { width: 100%; font-family: 'Montserrat', sans-serif; }
+body {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
 
-.header { height: 100vh; background: #ccc; background-image: url("../images/city.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; overflow: hidden; text-transform: uppercase; }
+.container {
+  width: 70%;
+  margin: auto;
+}
 
-.header__menu { background: rgba(0, 0, 0, 0.6); }
+.header {
+  height: 100vh;
+  background: #ccc;
+  background-image: url("../images/city.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-transform: uppercase;
+}
 
-.header__list { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; list-style: none; }
+.header__menu {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+}
 
-.header__item { margin: 10px 20px; }
+.header__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  list-style: none;
+}
 
-.header__link { position: relative; font-size: 20px; text-decoration: none; color: #fff; }
+.header__item {
+  margin: 10px 20px;
+}
 
-.header__link::after { content: ""; position: absolute; display: block; width: 0; height: 5px; top: 100%; left: 0; background: #cf1c24; opacity: 1; transition: 0.5s; }
+.header__link {
+  position: relative;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
 
-.header__link:hover:after { width: 50%; transform: translateX(100%); }
+.header__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 5px;
+  top: 100%;
+  left: 0;
+  background: #cf1c24;
+  opacity: 1;
+  transition: 0.5s;
+}
 
-.header__box-slogan { position: absolute; width: 1000px; top: 65%; left: 50%; transform: translate(-50%, -65%); text-align: center; letter-spacing: 1px; color: #fff; padding: 5px 10px; }
+.header__link:hover:after {
+  width: 50%;
+  transform: translateX(100%);
+}
 
-.header__title-h1 { font-size: 70px; }
+.header__box-slogan {
+  position: absolute;
+  width: 1000px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  text-align: center;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 5px 10px;
+}
 
-.header__title-h2 { font-size: 45px; color: #fff; }
+.header__title-h1 {
+  font-size: 70px;
+  line-height: 1;
+}
 
-.header__box-icon { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; width: 55px; height: 55px; margin: auto; margin-top: 20px; border: 2px solid #fff; border-radius: 50%; }
+.header__title-h2 {
+  font-size: 45px;
+  color: #fff;
+}
 
-.header__link-git { padding: 5px; }
+.header__box-icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
 
-.header__icon-git { font-size: 40px; color: #fff; transition: 0.7s; }
+.header__link-git {
+  padding: 5px;
+}
 
-.header__icon-git:hover { transform: rotateY(360deg); }
+.header__icon-git {
+  font-size: 40px;
+  color: #fff;
+  transition: 0.7s;
+}
+
+.header__icon-git:hover {
+  transform: rotateY(360deg);
+}
+
+.about-me {
+  background: #7A7A7A;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.about-me__title-h1 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+
+.about-me__box-text {
+  max-width: 700px;
+  line-height: 1.75;
+  margin: auto;
+}
+
+.about-me__text {
+  font-size: 18px;
+}
+
+.technologies {
+  padding: 100px 0;
+}
+
+.technologies__title-h1 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.technologies__title-h2 {
+  font-size: 22px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.technologies__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px;
+}
+
+.technologies__box-icon {
+  text-align: center;
+  padding: 20px 30px;
+}
+
+.technologies__icon {
+  font-size: 80px;
+  padding: 5px 0;
+}
+
+.technologies__icon--html5 {
+  color: #E44D26;
+}
+
+.technologies__icon--css3 {
+  color: #3595CF;
+}
+
+.technologies__icon--js {
+  color: #E8D44D;
+}
+
+.technologies__icon--sass {
+  color: #C66394;
+}
+
+.technologies__icon--git {
+  color: #E84D31;
+}
+
+.technologies__icon--react {
+  color: #61DAFB;
+}
+/*# sourceMappingURL=style.css.map */
