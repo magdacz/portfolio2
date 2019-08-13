@@ -3,6 +3,8 @@
 $color-primary: #fff;
 $color-second: #cf1c24;
 
+$color-other: #878888;
+
 $padding: 100px 0;
 
 @mixin flex-center {
@@ -219,3 +221,122 @@ body {
 	
 	&__title-icon {}
 }
+
+//PROJECTS
+
+.projects {
+	padding: $padding;
+	color: $color-primary;
+	background: #000010;
+	
+	&__title-h1 {
+		@include title1;
+		padding-bottom: 40px;
+	}
+	
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		text-align: center;
+	}
+	
+	&__box-project {
+		position: relative;
+		width: 400px;
+		margin: 25px 10px;
+		border: 6px solid $color-primary;
+		
+	}
+	
+	&__box-img {
+		position: relative;
+		max-width: 400px;
+		height: 265px;
+	}
+	
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	&__btn-description {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		width: 50px;
+		height: 50px;
+		font-size: 12px;
+		background: $color-primary;
+		border: 2px solid #000010;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: 0.5s;
+		
+		&::before {
+			content: '+';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #000010;
+			font-size: 30px;
+			font-weight: 700;
+			text-transform: uppercase;
+			transition-delay: 0.5s;
+		}
+		
+		&:hover {
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+			opacity: 0.9;
+			border-radius: 0;
+		}
+		
+		&:hover::before {
+			display: none;
+			transition-delay: 0s;
+		}
+		
+		&:hover ~ .projects__box-description {
+			opacity: 1;
+			visibility: visible;
+			transition: 0.2s;
+			transition-delay: 0.3s;
+			pointer-events: none;
+		}
+	}
+	
+	&__box-description {
+		color: #000010;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 70%;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: 0s;
+		padding: 15px 25px;
+	}
+	
+	&__box-links {
+		width: 100%;
+		padding: 20px 0 10px 0;
+	}
+	
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $color-second;
+		font-weight: 700;
+		margin-left: 10px;
+	}
+}
+
+
+
