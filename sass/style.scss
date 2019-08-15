@@ -155,8 +155,8 @@ body {
 	&__box-text {
 		max-width: 700px;
 		line-height: 1.75;
+		letter-spacing: 1px;
 		margin: auto;
-		
 	}
 	
 	&__text {
@@ -340,11 +340,77 @@ body {
 	}
 }
 
+//CONTACT
+.contact {
+	color: $color-third;
+	//background: $color-other;
+	padding: $padding;
+	
+	&__title-h1 {
+		@include title1;
+		padding-bottom: 40px;
+	}
+	
+	&__container {}
+	
+	&__box {
+		max-width: 400px;
+		margin: auto;
+		font-size: 18px;
+		text-align: center;
+	}
+	
+	&__box-info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	
+	&__icon {
+		font-size: 30px;
+		margin-right: 15px;
+		
+		&--git {
+			font-size: 40px;
+			color: $color-third;
+			transition: 0.7s;
+				
+			&:hover {
+					transform: rotateY(360deg);
+			}
+		
+		}
+	}
+		
+	&__desc {
+		}
+		
+	&__info {
+			flex-basis: 100%;
+			padding: 10px 0;
+			color: $color-second;
+		}
+	
+	&__box-icon {
+		@include flex-center;
+		width: 55px;
+		height: 55px;
+		margin: auto;
+		margin-top: 20px;
+		border: 2px solid black;
+		border-radius: 50%;
+	}
+	
+	&__link {
+	}
+}
+
 //FOOTER
 .footer {
 	background: $color-third;
 	padding: 15px;
-	border-top: 2px solid white;
 	
 	&__text {
 		text-align: center;
