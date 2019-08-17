@@ -166,6 +166,7 @@ body {
 
 //TECHNOLOGIES
 .technologies {
+	color: $color-third;
 	padding: $padding;
 	
 	&__title-h1 {
@@ -246,89 +247,112 @@ body {
 		width: 400px;
 		margin: 25px 10px;
 		border: 6px solid $color-primary;
-		
 	}
 	
 	&__box-img {
 		position: relative;
 		max-width: 400px;
 		height: 265px;
+		overflow: hidden;
+		transition: 0.5s;
+		
+		&:hover {
+			background: $color-primary;
+		}
+		
+		 &:hover::before {
+		 	transform: scaleX(1);
+			opacity: 1;
+		}
+    
+     	&:hover::after {
+			transform: scaleY(1);
+			opacity: 1;
+		}
+		
+		&:hover .projects__img {
+			transform: scale(1.2);
+			opacity: 0.2;
+		}
+		
+		&:hover .projects__box-description {
+  			opacity: 1;
+  			visibility: visible;
+		}
+		
+		&:hover .projects__text-description, &:hover .projects__box-links {
+			opacity: 1;
+  			visibility: visible;
+  			transform: translateY(0);
+		}
+		
+		&::before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			border-top: 3px solid $color-second;
+			border-bottom: 3px solid $color-second;
+			transition: 0.5s;
+			transform: scaleX(0);
+			opacity: 0;
+			z-index: 1;
+    	}
+    
+		 &::after {
+		 	content: '';
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			border-left: 3px solid $color-second;
+			border-right: 3px solid $color-second;
+		  	transition: 0.5s;
+		  	transform: scaleY(0);
+		  	opacity: 0;
+		   	z-index: 1;
+		}
 	}
 	
 	&__img {
+		position: relative;
 		width: 100%;
 		height: 100%;
-	}
-	
-	&__btn-description {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		width: 50px;
-		height: 50px;
-		font-size: 12px;
-		background: $color-primary;
-		box-shadow: 0px 0px 0px 3px $color-second;
-		border-radius: 50%;
-		cursor: pointer;
 		transition: 0.5s;
-		
-		&::before {
-			content: 'więcej';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: #000010;
-			font-size: 10px;
-			font-weight: 700;
-			text-transform: uppercase;
-			transition-delay: 0.5s;
-		}
-		
-		&:hover {
-			bottom: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			border: none;
-			opacity: 0.9;
-			border-radius: 0;
-		}
-		
-		&:hover::before {
-			display: none;
-			transition-delay: 0s;
-		}
-		
-		&:hover ~ .projects__box-description {
-			opacity: 1;
-			visibility: visible;
-			transition: 0.2s;
-			transition-delay: 0.3s;
-			//pointer-events: none;
-			//cursor: auto;
-		}
 	}
 	
 	&__box-description {
-		color: #000010;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 70%;
-		z-index: 1;
-		opacity: 0;
-		visibility: hidden;
-		transition: 0s;
+		color: #000010;
 		padding: 15px 25px;
-		pointer-events: none;
+		transition: 0.5s;
+    	opacity: 0;
+    	visibility: hidden;
+    	z-index: 2;
+		
+	}
+	
+	&__text-description{
+		transition: 0.5s;
+  		transform: translateY(-180px);
+  		opacity: 0;
+  		visibility: hidden;
 	}
 	
 	&__box-links {
 		width: 100%;
 		padding: 20px 0 10px 0;
+		transition: 0.5s;
+  		transform: translateY(120px);
+  		opacity: 0;
+  		visibility: hidden;
 	}
 	
 	&__link {
