@@ -15,6 +15,32 @@ body {
   margin: auto;
 }
 
+.dots {
+  position: relative;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dots--up {
+  top: -10px;
+}
+
+.dots__dot {
+  width: 20px;
+  height: 20px;
+  background: #cf1c24;
+  box-shadow: 0 0 0 6px white;
+  transform: translateX(-50%);
+  transform: rotate(45deg);
+  margin-right: 21px;
+}
+
 .header {
   height: 100vh;
   background: #ccc;
@@ -103,6 +129,11 @@ body {
   margin-top: 20px;
   border: 2px solid #fff;
   border-radius: 50%;
+  transition: 0.5s;
+}
+
+.header__box-icon:hover {
+  border-color: #cf1c24;
 }
 
 .header__link-git {
@@ -112,7 +143,7 @@ body {
 .header__icon-git {
   font-size: 40px;
   color: #fff;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .header__icon-git:hover {
@@ -120,9 +151,11 @@ body {
 }
 
 .about-me {
+  position: relative;
   background: #7A7A7A;
   color: #fff;
   padding: 100px 0;
+  z-index: -1;
 }
 
 .about-me__title-h1 {
@@ -144,6 +177,7 @@ body {
 }
 
 .technologies {
+  position: relative;
   color: #000010;
   padding: 100px 0;
 }
@@ -206,6 +240,7 @@ body {
 }
 
 .projects {
+  position: relative;
   padding: 100px 0;
   color: #fff;
   background: #000010;
@@ -349,6 +384,7 @@ body {
 }
 
 .contact {
+  position: relative;
   color: #000010;
   padding: 100px 0;
 }
@@ -381,12 +417,13 @@ body {
 .contact__icon {
   font-size: 30px;
   margin-right: 15px;
+  transition: 0.5s;
 }
 
 .contact__icon--git {
   font-size: 40px;
   color: #000010;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .contact__icon--git:hover {
@@ -415,9 +452,14 @@ body {
   border-radius: 50%;
 }
 
+.contact__box-icon:hover {
+  border-color: #cf1c24;
+  transition: 0.5s;
+}
+
 .footer {
   background: #000010;
-  padding: 15px;
+  padding: 20px;
 }
 
 .footer__text {

@@ -38,6 +38,33 @@ body {
     margin: auto;
 }
 
+//DOTS
+
+.dots {
+	position: relative;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	
+	&--up {
+		top: -10px;
+	}
+	
+	&__dot {
+		width: 20px;
+		height: 20px;
+		background: $color-second;
+		box-shadow: 0 0 0 6px white;
+		transform: translateX(-50%);
+		transform: rotate(45deg);
+		margin-right: 21px;
+	}
+}
+
+
 //HEADER
 .header {
 	height: 100vh;
@@ -121,6 +148,11 @@ body {
 		margin-top: 20px;
 		border: 2px solid $color-primary;
 		border-radius: 50%;
+		transition: 0.5s;
+		
+		&:hover {
+			border-color: $color-second;
+		}
 	}
 	
 	&__link-git {
@@ -130,7 +162,7 @@ body {
 	&__icon-git {
 		font-size: 40px;
 		color: $color-primary;
-		transition: 0.7s;
+		transition: 0.5s;
 		
 		&:hover {
 			transform: rotateY(360deg);
@@ -140,9 +172,11 @@ body {
 
 //ABOUT ME
 .about-me {
+	position: relative;
 	background: #7A7A7A;
 	color: $color-primary;
 	padding: $padding;
+	z-index: -1;
 	
 	&__title-h1 {
 		@include title1;
@@ -166,6 +200,7 @@ body {
 
 //TECHNOLOGIES
 .technologies {
+	position: relative;
 	color: $color-third;
 	padding: $padding;
 	
@@ -226,10 +261,11 @@ body {
 
 //PROJECTS
 .projects {
+	position: relative;
 	padding: $padding;
 	color: $color-primary;
 	background: #000010;
-	
+
 	&__title-h1 {
 		@include title1;
 		padding-bottom: 40px;
@@ -366,8 +402,8 @@ body {
 
 //CONTACT
 .contact {
+	position: relative;
 	color: $color-third;
-	//background: $color-other;
 	padding: $padding;
 	
 	&__title-h1 {
@@ -395,14 +431,15 @@ body {
 	&__icon {
 		font-size: 30px;
 		margin-right: 15px;
+		transition: 0.5s;
 		
 		&--git {
 			font-size: 40px;
 			color: $color-third;
-			transition: 0.7s;
+			transition: 0.5s;
 				
 			&:hover {
-					transform: rotateY(360deg);
+				transform: rotateY(360deg);
 			}
 		
 		}
@@ -425,6 +462,11 @@ body {
 		margin-top: 20px;
 		border: 2px solid black;
 		border-radius: 50%;
+		
+		&:hover {
+			border-color: $color-second;
+			transition: 0.5s;
+		}
 	}
 	
 	&__link {
@@ -434,7 +476,7 @@ body {
 //FOOTER
 .footer {
 	background: $color-third;
-	padding: 15px;
+	padding: 20px;
 	
 	&__text {
 		text-align: center;
@@ -442,6 +484,8 @@ body {
 		color: $color-primary;
 	}
 }
+
+
 
 
 
