@@ -38,9 +38,9 @@ body {
     margin: auto;
 }
 
-//DOTS
+//SEPARATOR
 
-.dots {
+.separator {
 	position: relative;
 	position: absolute;
 	display: flex;
@@ -49,11 +49,11 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	
-	&--up {
+	&--top {
 		top: -10px;
 	}
 	
-	&__dot {
+	&__item {
 		width: 20px;
 		height: 20px;
 		background: $color-second;
@@ -75,20 +75,68 @@ body {
 	background-position: center;
 	overflow: hidden;
 	text-transform: uppercase;
-
+	
 	&__menu {
 		background: rgba(0, 0, 0, 0.6);
 		padding: 10px 0;
+		
+		@media (max-width:966px) {
+			padding: 0;
+		}
 	}
+	
+	&__burger-icon, &__toggle-input {
+		position: absolute;
+		display: none;
+		right: 20px;
+		color: $color-primary;
+		
+	}
+	
+	&__burger-icon {
+		display: none;
+		font-size: 26px;
+		color:$color-primary;
+		//border: 1px solid gold;
+		
+		@media (max-width:966px) {
+			display: block;
+			font-size: 36px;
+			cursor: pointer;
+		}
+	}
+	
+	
+	&__toggle-input:checked + &__list {
+		@media (max-width:966px) {
+			display: block;
+			padding-top: 50px;
+		}
+	}
+
+	
 	
 	&__list {
 		display: flex;
 		justify-content: center;
 		list-style: none;
+		//border: 1px solid red;
+		//width: 80%;
+		margin: auto;
+		
+		@media (max-width:966px) {
+			display: none;
+			padding-bottom: 10px;
+		}
 	}
 	
 	&__item {
 		margin: 10px 20px;
+		//border: 1px solid gold;
+		
+		@media (max-width:966px) {
+			text-align: center;
+		}
 	}
 	
 	&__link {
