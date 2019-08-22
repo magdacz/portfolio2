@@ -97,11 +97,11 @@ body {
 		display: none;
 		font-size: 26px;
 		color:$color-primary;
-		//border: 1px solid gold;
 		
 		@media (max-width:966px) {
 			display: block;
 			font-size: 36px;
+			font-weight: bold;
 			cursor: pointer;
 		}
 	}
@@ -120,8 +120,6 @@ body {
 		display: flex;
 		justify-content: center;
 		list-style: none;
-		//border: 1px solid red;
-		//width: 80%;
 		margin: auto;
 		
 		@media (max-width:966px) {
@@ -132,7 +130,6 @@ body {
 	
 	&__item {
 		margin: 10px 20px;
-		//border: 1px solid gold;
 		
 		@media (max-width:966px) {
 			text-align: center;
@@ -156,6 +153,10 @@ body {
 			background: $color-second;
 			opacity: 1;
 			transition: 0.5s;
+			
+			@media (max-width:966px) {
+				display: none;
+			}
 		}
 	
 		&:hover {
@@ -176,16 +177,62 @@ body {
 		letter-spacing: 1px;
 		color: $color-primary;
 		padding: 5px 10px;
+		
+		@media (max-width: 575px) {
+			width: auto;
+			padding: 20px 25px;
+			background: rgba(0,0,0,0.8);
+			border: 6px solid $color-second;;
+		}
+		
+		@media (max-width: 996px) {
+			top: 60%;
+			transform: translate(-50%, -60%);
+		}
+		
+		@media (max-width: 768px) {
+			top: 60%;
+			transform: translate(-50%, -60%);
+		}
 	}
 	
 	&__title-h1 {
 		font-size: 70px;
 		line-height: 1;
+		
+		@media (max-width: 1000px) {
+			font-size: 55px;
+		}
+		
+		@media (max-width: 768px) {
+			font-size: 45px;
+		}
+		
+		@media (max-width: 640px) {
+			font-size: 40px;
+		}
 	}
 	
 	&__title-h2 {
-		font-size: 45px;
+		font-size: 40px;
 		color: $color-primary;
+		
+		@media (max-width: 1000px) {
+			font-size: 35px;
+		}
+		
+		@media (max-width: 768px) {
+			font-size: 30px;
+		}
+		
+		@media (max-width: 640px) {
+			font-size: 25px;
+		}
+		
+		@media (max-width: 575px) {
+			color: $color-second;
+		}
+		
 	}
 	
 	&__box-icon {
@@ -200,6 +247,14 @@ body {
 		
 		&:hover {
 			border-color: $color-second;
+			
+			@media (max-width: 966px) {
+			border-color: $color-primary;
+		}
+		}
+		
+		@media (max-width: 966px) {
+			margin-top: 10px;
 		}
 	}
 	
@@ -357,6 +412,11 @@ body {
 		&:hover .projects__img {
 			transform: scale(1.2);
 			opacity: 0.2;
+			
+			@media (max-width:966px) {
+				transform: scale(1);
+				opacity: 1;
+			}
 		}
 		
 		&:hover .projects__box-description {
@@ -399,6 +459,12 @@ body {
 		  	opacity: 0;
 		   	z-index: 1;
 		}
+		
+		&::after, &::before {
+			@media (max-width:966px) {
+				display: none;
+			}
+		}
 	}
 	
 	&__img {
@@ -421,6 +487,9 @@ body {
     	visibility: hidden;
     	z-index: 2;
 		
+		@media (max-width:966px) {
+			display: none;
+		}
 	}
 	
 	&__text-description{
