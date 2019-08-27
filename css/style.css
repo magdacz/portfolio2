@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
@@ -28,7 +32,13 @@ body {
 }
 
 .separator--top {
-  top: -10px;
+  top: -12px;
+}
+
+@media (max-width: 966px) {
+  .separator--top {
+    bottom: 200px;
+  }
 }
 
 .separator__item {
@@ -534,6 +544,61 @@ body {
   margin-left: 10px;
 }
 
+.media {
+  display: none;
+}
+
+@media (max-width: 966px) {
+  .media {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .media__title-h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .media__title-h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .media__title-h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .media__title-h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .media__text {
+    font-size: 12px;
+  }
+}
+
+.media__links {
+  padding: 20px;
+}
+
+.media__item {
+  color: #cf1c24;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 10px;
+  padding: 5px 15px;
+  border: 1px solid #cf1c24;
+  border-radius: 4px;
+}
+
 .contact {
   position: relative;
   color: #000010;
@@ -608,6 +673,12 @@ body {
   transition: 0.5s;
 }
 
+@media (max-width: 966px) {
+  .contact__box-icon:hover {
+    border-color: #000010;
+  }
+}
+
 .footer {
   background: #000010;
   padding: 20px;
@@ -617,5 +688,39 @@ body {
   text-align: center;
   text-size: 14px;
   color: #fff;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50px;
+  background: #cf1c24;
+  opacity: 1;
+  transition: .5s;
+  outline: none;
+  cursor: pointer;
+}
+
+.toTop::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/scrollup.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

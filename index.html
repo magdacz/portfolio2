@@ -9,16 +9,16 @@
 	</head>
 	<body>
 		<!--HEADER-->
-		<header class="header">
+		<header class="header" id="start">
 			<nav class="header__menu">
-				<label class="header__burger-icon" for="toggle">&#9776</label>
+				<label class="header__burger-icon" for="toggle">&#9776;</label>
 				<input type="checkbox" class="header__toggle-input" id="toggle">
 				<ul class="header__list">
-					<li class="header__item"><a class="header__link" href="#">start</a></li>
-					<li class="header__item"><a class="header__link" href="#">o mnie</a></li>
-					<li class="header__item"><a class="header__link" href="#">technologie</a></li>
-					<li class="header__item"><a class="header__link" href="#">projekty</a></li>
-					<li class="header__item"><a class="header__link" href="#">kontakt</a></li>
+					<li class="header__item"><a class="header__link" href="#start">start</a></li>
+					<li class="header__item"><a class="header__link" href="#about-me">o mnie</a></li>
+					<li class="header__item"><a class="header__link" href="#technologies">technologie</a></li>
+					<li class="header__item"><a class="header__link" href="#projects">projekty</a></li>
+					<li class="header__item"><a class="header__link" href="#contact">kontakt</a></li>
 				</ul>
 			</nav>
 			<div class="header__box-slogan">
@@ -30,7 +30,7 @@
 			</div>
 		</header>
 		<!--ABOUT ME-->
-		<section class="about-me">
+		<section class="about-me" id="about-me">
 			<h1 class="about-me__title-h1">O mnie</h1>
 			<div class="about-me__container container">
 				<div class="about-me__box-text">
@@ -44,7 +44,7 @@
 			</div>
 		</section>
 		<!--TECHNOLOGIES-->
-		<section class='technologies'>
+		<section class='technologies' id="technologies">
 			<h1 class="technologies__title-h1">Technologie</h1>
 			<h2 class="technologies__title-h2">Technologie, które poznałam</h2>
 			<div class="technologies__container container">
@@ -75,7 +75,7 @@
 			</div>
 		</section>
 		<!--PROJECTS-->
-		<section class="projects">
+		<section class="projects" id="projects">
 			<div class="separator separator--top">
 				<div class="separator__item"></div>
 				<div class="separator__item"></div>
@@ -84,6 +84,7 @@
 			<h1 class="projects__title-h1">Projekty</h1>
 			<div class="projects__container container">
 				
+				<div class="project__project">
 				  <div class="projects__box-project">
                     <div class="projects__box-img">
                     	<img class="projects__img" src="images/awax.jpg" alt="awax">
@@ -100,23 +101,23 @@
 					  	</div>
                     </div>
 				</div>
-				<!--
-				<div class="projects__box-project">
-                    <div class="projects__box-img">
-                    	<img class="projects__img" src="images/golden.jpg" alt="golden">
-						<div class="projects__btn-description"></div>
-						<div class="projects__box-description">
-							<h2>Golden</h2>
-							<h3>Strona PSD do HTML</h3>
-							<p>HTML5, CSS3, Sass</p>
-							<div class="projects__box-links">
-                                <a class="projects__link" href="https://magdacz.github.io/Golden/" target="_blank">Live</a>
-                                <a class="projects__link" href="https://github.com/magdacz/Golden" target="_blank">Code</a>
-                            </div>
-					  	</div>
+				
+				<div class="media">
+					<div class="media__text-desc">
+						<h2 class="media__title-h2">Awax</h2>
+						<h3 class="media__title-h3">Strona PSD do HTML</h3>
+						<p class="media__text">HTML5, CSS3, Sass</p>
+					</div>
+					<div class="media__links">
+                    	<a class="media__item" href="https://magdacz.github.io/Awax/" target="_blank">Live</a>
+                        <a class="media__item" href="https://github.com/magdacz/Awax" target="_blank">Code</a>
                     </div>
 				</div>
-				-->
+			</div>
+				
+				
+					
+				
 			</div>
 			<div class="separator">
 				<div class="separator__item"></div>
@@ -125,7 +126,7 @@
 			</div>
 		</section>
 		<!--CONTACT-->
-		<section class="contact">
+		<section class="contact" id="contact">
 			<h1 class="contact__title-h1">Kontakt</h1>
 			<div class="contact__container container">
 				<div class="contact__box">
@@ -149,5 +150,6 @@
 		<footer class="footer">
 			<p class="footer__text">Magdalena Czaicka-Chmielewska &copy; 2019</p>
 		</footer>
+		<script src="js/script.js"></script>
 	</body>
 </html>

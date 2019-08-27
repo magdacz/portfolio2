@@ -28,6 +28,11 @@ $padding: 100px 0;
 	box-sizing: border-box;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
+
 body {
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
@@ -50,7 +55,11 @@ body {
 	transform: translateX(-50%);
 	
 	&--top {
-		top: -10px;
+		top: -12px;
+		
+		@media (max-width:966px) {
+			bottom: 200px;	
+		}
 	}
 	
 	&__item {
@@ -381,6 +390,9 @@ body {
 		text-align: center;
 	}
 	
+	&__project {
+	}
+	
 	&__box-project {
 		position: relative;
 		width: 400px;
@@ -517,6 +529,55 @@ body {
 	}
 }
 
+.media {
+	display: none;
+	
+	@media (max-width:966px) {
+				display: block;
+			}
+	
+	&__title-h2	{
+		@media (max-width: 768px) {
+            font-size: 20px;
+        }
+
+        @media (max-width: 375px) {
+            font-size: 18px;
+        }
+	}
+	
+	&__title-h3 {
+		@media (max-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 375px) {
+            font-size: 14px;
+        }
+	}
+	
+	&__text {
+		@media (max-width: 375px) {
+            font-size: 12px;
+        }
+	}
+	
+	&__links {
+		padding: 20px;
+	}
+	
+	&__item {
+		color: $color-second;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 0 10px;
+		padding: 5px 15px;
+		border: 1px solid $color-second;
+		border-radius: 4px;
+	}
+}
+
 //CONTACT
 .contact {
 	position: relative;
@@ -583,6 +644,10 @@ body {
 		&:hover {
 			border-color: $color-second;
 			transition: 0.5s;
+			
+				@media (max-width: 966px) {
+					border-color: $color-third;
+				}
 		}
 	}
 	
@@ -602,7 +667,41 @@ body {
 	}
 }
 
+//BUTTON BACK TO TOP
 
+.toTop {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50px;
+    background: $color-second;
+    opacity: 1;
+    transition: .5s;
+    outline: none;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        background-image: url(../images/scrollup.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+		z-index: 3;
+    } 
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 
 
