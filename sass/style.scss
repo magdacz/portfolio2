@@ -397,13 +397,13 @@ body {
 		position: relative;
 		width: 400px;
 		margin: 25px 10px;
-		border: 6px solid $color-primary;
 	}
 	
 	&__box-img {
 		position: relative;
 		max-width: 400px;
 		height: 265px;
+		border: 6px solid $color-primary;
 		overflow: hidden;
 		transition: 0.5s;
 		
@@ -531,6 +531,7 @@ body {
 
 .media {
 	display: none;
+	padding-top: 20px;
 	
 	@media (max-width:966px) {
 				display: block;
