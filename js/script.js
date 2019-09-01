@@ -1,4 +1,17 @@
-//button
+//menu burger
+
+const btnBurger = document.querySelector('.menu-toggle');
+const activeElements = document.querySelectorAll('.burger');
+
+const fnActive = () => {
+	for(let i = 0; i < activeElements.length; i++) {
+		activeElements[i].classList.toggle('active')
+	}
+}
+
+btnBurger.addEventListener('click', fnActive);
+
+//button-top
 
 const createBtn = () => {
 	const btn = document.createElement('button');

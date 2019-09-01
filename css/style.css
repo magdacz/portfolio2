@@ -51,6 +51,62 @@ body {
   margin-right: 21px;
 }
 
+.menu-toggle {
+  position: relative;
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+}
+
+@media (max-width: 966px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.menu-toggle .item {
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  transition: .5s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle .item:nth-child(1) {
+  top: 30%;
+}
+
+.menu-toggle .item:nth-child(3) {
+  top: 70%;
+}
+
+.active .item:nth-child(1) {
+  top: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.active .item:nth-child(2) {
+  opacity: 0;
+}
+
+.active .item:nth-child(3) {
+  top: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .header {
   height: 100vh;
   background: #ccc;
@@ -65,41 +121,18 @@ body {
 .header__menu {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 0;
+  transition: .5s;
 }
 
 @media (max-width: 966px) {
   .header__menu {
     padding: 0;
+    opacity: 0;
   }
 }
 
-.header__burger-icon, .header__toggle-input {
-  position: absolute;
-  display: none;
-  right: 20px;
-  color: #fff;
-}
-
-.header__burger-icon {
-  display: none;
-  font-size: 26px;
-  color: #fff;
-}
-
-@media (max-width: 966px) {
-  .header__burger-icon {
-    display: block;
-    font-size: 36px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-}
-
-@media (max-width: 966px) {
-  .header__toggle-input:checked + .header__list {
-    display: block;
-    padding-top: 50px;
-  }
+.header__menu.active {
+  opacity: 1;
 }
 
 .header__list {
@@ -113,9 +146,13 @@ body {
 
 @media (max-width: 966px) {
   .header__list {
-    display: none;
+    display: block;
     padding-bottom: 10px;
   }
+}
+
+.header__list.active {
+  text-align: center;
 }
 
 .header__item {
@@ -125,6 +162,14 @@ body {
 @media (max-width: 966px) {
   .header__item {
     text-align: center;
+    margin: 0;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 966px) {
+  .header__item:nth-child(1) {
+    padding-top: 35px;
   }
 }
 

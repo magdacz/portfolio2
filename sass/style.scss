@@ -75,6 +75,61 @@ body {
 
 
 //HEADER
+
+.menu-toggle {
+	position: relative;
+	position: absolute;
+	display: none;
+	top: 10px; 
+	right: 20px;
+	height: 50px;
+	width: 50px;
+	z-index: 2;
+	
+	@media (max-width:966px) {
+		display: block;
+	}
+	
+	.item {
+		display: block;
+		position: absolute;
+		width: 60%;
+		height: 4px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: white;
+		transition: .5s;
+		box-shadow: 0 2px 2px rgba(0,0,0,.20);
+	}
+	
+	.item:nth-child(1) {
+		top: 30%;
+	}
+	
+	.item:nth-child(3) {
+		top: 70%;
+	}
+}
+
+.active .item:nth-child(1) {
+		top: 30%;
+		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+.active .item:nth-child(2) {
+	opacity: 0;
+}
+	
+	.active .item:nth-child(3) {
+		top: 70%;
+		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+
 .header {
 	height: 100vh;
 	background: #ccc;
@@ -88,42 +143,17 @@ body {
 	&__menu {
 		background: rgba(0, 0, 0, 0.6);
 		padding: 10px 0;
+		transition: .5s;
 		
 		@media (max-width:966px) {
 			padding: 0;
+			opacity: 0;
 		}
 	}
 	
-	&__burger-icon, &__toggle-input {
-		position: absolute;
-		display: none;
-		right: 20px;
-		color: $color-primary;
-		
+	&__menu.active {
+		opacity: 1;
 	}
-	
-	&__burger-icon {
-		display: none;
-		font-size: 26px;
-		color:$color-primary;
-		
-		@media (max-width:966px) {
-			display: block;
-			font-size: 36px;
-			font-weight: bold;
-			cursor: pointer;
-		}
-	}
-	
-	
-	&__toggle-input:checked + &__list {
-		@media (max-width:966px) {
-			display: block;
-			padding-top: 50px;
-		}
-	}
-
-	
 	
 	&__list {
 		display: flex;
@@ -132,16 +162,29 @@ body {
 		margin: auto;
 		
 		@media (max-width:966px) {
-			display: none;
+			display: block;
 			padding-bottom: 10px;
-		}
+		} 
 	}
+	
+	&__list.active {
+		text-align: center;
+	}
+	
 	
 	&__item {
 		margin: 10px 20px;
 		
 		@media (max-width:966px) {
 			text-align: center;
+			margin: 0;
+			padding: 5px 0;
+		}
+		
+		&:nth-child(1) {
+			@media (max-width:966px) {
+				padding-top: 35px;
+			}
 		}
 	}
 	
