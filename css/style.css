@@ -449,7 +449,6 @@ body {
   text-align: center;
   color: #E40C2B;
   padding-bottom: 80px;
-  padding-bottom: 40px;
 }
 
 .projects__container {
@@ -457,8 +456,8 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
   text-align: center;
 }
 
@@ -466,6 +465,12 @@ body {
   position: relative;
   width: 400px;
   margin: 25px 10px;
+  box-shadow: 5px 5px 8px #777;
+  transition: 0.5s;
+}
+
+.projects__box-project:hover {
+  box-shadow: 16px 16px 16px #777;
 }
 
 .projects__box-img {
@@ -655,6 +660,14 @@ body {
   padding: 5px 15px;
   border: 1px solid #E40C2B;
   border-radius: 4px;
+  outline: none;
+  transition: 0.5s;
+}
+
+.media__item:focus {
+  color: #F7F4E9;
+  background-color: #E40C2B;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
 }
 
 .contact {

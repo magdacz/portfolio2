@@ -437,23 +437,25 @@ body {
 
 	&__title-h1 {
 		@include title1;
-		padding-bottom: 40px;
 	}
 	
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		text-align: center;
-	}
-	
-	&__project {
 	}
 	
 	&__box-project {
 		position: relative;
 		width: 400px;
 		margin: 25px 10px;
+		box-shadow: 5px 5px 8px #777;
+		transition: 0.5s;
+
+		&:hover {
+			box-shadow: 16px 16px 16px #777;
+		}
 	}
 	
 	&__box-img {
@@ -633,6 +635,14 @@ body {
 		padding: 5px 15px;
 		border: 1px solid $color-second;
 		border-radius: 4px;
+		outline: none;
+		transition: 0.5s;
+
+		&:focus {
+			color: $color-primary;
+			background-color: $color-second;
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+		}
 	}
 }
 
