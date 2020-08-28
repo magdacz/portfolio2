@@ -23,8 +23,8 @@ body {
 .wrapper {
   width: 95%;
   background-color: #F7F4E9;
-  margin: 100px auto 70px;
   border-radius: 20px;
+  margin: 100px auto 70px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
@@ -49,6 +49,41 @@ body {
 .title-wrapper {
   width: 100%;
   text-align: center;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+  background-color: #E40C2B;
+}
+
+.circle-top {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 400px;
+  height: 400px;
+  background-color: #E40C2B;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.circle-bottom {
+  position: absolute;
+  left: -180px;
+  bottom: 0px;
+  width: 400px;
+  height: 400px;
+  background-color: #E40C2B;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .menu-toggle {
@@ -364,6 +399,7 @@ body {
   text-align: center;
   color: #E40C2B;
   padding-bottom: 80px;
+  text-transform: uppercase;
 }
 
 .about-me__box-text {
@@ -390,6 +426,7 @@ body {
   text-align: center;
   color: #E40C2B;
   padding-bottom: 80px;
+  text-transform: uppercase;
 }
 
 .technologies__container {
@@ -449,6 +486,7 @@ body {
   text-align: center;
   color: #E40C2B;
   padding-bottom: 80px;
+  text-transform: uppercase;
 }
 
 .projects__container {
@@ -684,6 +722,7 @@ body {
   text-align: center;
   color: #E40C2B;
   padding-bottom: 80px;
+  text-transform: uppercase;
   padding-bottom: 40px;
 }
 
@@ -795,16 +834,26 @@ body {
 .toTop {
   position: fixed;
   bottom: 30px;
-  right: 10px;
-  width: 70px;
-  height: 70px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
   border: none;
-  border-radius: 50px;
+  border-radius: 20%;
   background: #E40C2B;
   opacity: 1;
   transition: .5s;
   outline: none;
   cursor: pointer;
+}
+
+.toTop:focus {
+  box-shadow: 5px 5px 8px #777;
+  transform: scale(1.2);
+}
+
+.toTop:hover {
+  box-shadow: 5px 5px 8px #777;
+  transform: scale(1.1);
 }
 
 .toTop::after {

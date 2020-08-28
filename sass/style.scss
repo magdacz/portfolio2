@@ -5,7 +5,7 @@ $color-second: #E40C2B;
 $color-third: #1D1D2C;
 // $color-second: #3CBCC3;
 
-$color-other: #878888;
+// $color-other: #878888;
 
 $padding: 120px 0 20px 0;
 
@@ -22,6 +22,7 @@ $padding: 120px 0 20px 0;
 	text-align: center;
 	color: $color-second;
 	padding-bottom: 80px;
+	text-transform: uppercase;
 }
 
 
@@ -51,12 +52,11 @@ body {
 .wrapper {
 	width: 95%;
 	background-color: $color-primary;
-	margin: 100px auto 70px;
 	border-radius: 20px;
+	margin: 100px auto 70px;
 	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 	overflow: hidden;
 }
-
 
 .container {
     width: 70%;
@@ -81,6 +81,41 @@ body {
 .title-wrapper {
 	width: 100%;
 	text-align: center;
+}
+
+.line::after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 4px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 5px;
+	background-color: $color-second;
+}
+
+.circle-top {
+	position: absolute;
+	top: -100px;
+	right: -50px;
+	width: 400px;
+	height: 400px;
+	background-color: $color-second;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+    z-index: -1;
+}
+
+.circle-bottom {
+	position: absolute;
+	left: -180px;
+	bottom: 0px;
+	width: 400px;
+	height: 400px;
+	background-color: $color-second;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+    z-index: -1;
 }
 
 //HEADER
@@ -759,16 +794,26 @@ body {
 .toTop {
     position: fixed;
     bottom: 30px;
-    right: 10px;
-    width: 70px;
-    height: 70px;
+    right: 100px;
+    width: 50px;
+    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 20%;
     background: $color-second;
     opacity: 1;
     transition: .5s;
     outline: none;
-    cursor: pointer;
+	cursor: pointer;
+	
+	&:focus {
+		box-shadow: 5px 5px 8px #777;
+		transform: scale(1.2);		
+	}
+
+	&:hover {
+		box-shadow: 5px 5px 8px #777;
+		transform: scale(1.1);	
+	}
 
     &::after {
         content: "";
