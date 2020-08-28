@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext');
 
-$color-primary: #fff;
-$color-second: #cf1c24;
-$color-third: #000010;
+$color-primary: #F7F4E9;
+$color-second: #E40C2B;
+$color-third: #1D1D2C;
+// $color-second: #3CBCC3;
 
 $color-other: #878888;
 
@@ -38,9 +39,40 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.body-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 95%;
+	background-color: $color-primary;
+	margin: 100px auto 70px;
+	border-radius: 20px;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+	overflow: hidden;
+}
+
+
 .container {
     width: 70%;
     margin: auto;
+}
+
+.git-wrapper {
+
+	&__link {
+		transition: 0.3s;
+
+		&:focus {
+			padding: 15px;
+			border: 2px solid $color-second;
+			border-radius: 50%;
+			transform: scale(1.1);
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+		}
+	}
 }
 
 //SEPARATOR
@@ -88,6 +120,13 @@ body {
 	border: none;				
 	z-index: 2;
 	cursor: pointer;
+	outline: none;
+
+	&:focus {
+		border: 1px solid $color-second;
+		border-radius: 5px;
+		box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+	}
 	
 	@media (max-width:966px) {
 		display: block;
@@ -134,17 +173,12 @@ body {
 	}
 
 .header {
-	height: 100vh;
-	background: #ccc;
-	background-image: url('../images/city.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
+	position: relative;
+	height: 80vh;
+	background: $color-third;
 	text-transform: uppercase;
 	
 	&__menu {
-		background: rgba(0, 0, 0, 0.6);
 		padding: 10px 0;
 		transition: .5s;
 		
@@ -198,6 +232,9 @@ body {
 		font-size: 20px;
 		text-decoration: none;
 		color: $color-primary;
+		padding: 5px 10px;
+		outline: none;
+		transition: 0.3s;
 		
 		&::after {
 			content: "";
@@ -214,6 +251,12 @@ body {
 			@media (max-width:966px) {
 				display: none;
 			}
+		}
+
+		&:focus {
+			color: $color-second;
+			border-radius: 5px;
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);	
 		}
 	
 		&:hover {
@@ -239,7 +282,6 @@ body {
 			width: auto;
 			padding: 20px 25px;
 			background: rgba(0,0,0,0.8);
-			border: 6px solid $color-second;;
 		}
 		
 		@media (max-width: 996px) {
@@ -256,6 +298,7 @@ body {
 	&__title-h1 {
 		font-size: 70px;
 		line-height: 1;
+		color: $color-primary;
 		
 		@media (max-width: 1000px) {
 			font-size: 55px;
@@ -272,7 +315,8 @@ body {
 	
 	&__title-h2 {
 		font-size: 40px;
-		color: $color-primary;
+		color: $color-second;
+		transform: skew(-10deg);
 		
 		@media (max-width: 1000px) {
 			font-size: 35px;
@@ -297,13 +341,12 @@ body {
 		width: 55px;
 		height: 55px;
 		margin: auto;
-		margin-top: 20px;
+		margin-top: 50px;
 		border: 2px solid $color-primary;
 		border-radius: 50%;
 		transition: 0.5s;
 		
 		&:hover {
-			border-color: $color-second;
 			
 			@media (max-width: 966px) {
 			border-color: $color-primary;
@@ -317,6 +360,12 @@ body {
 	
 	&__link-git {
 		padding: 5px;
+		outline: none;
+
+		// &:focus {
+		// 	padding: 15px;
+		// 	border-radius: 5px;		
+		// }
 	}
 	
 	&__icon-git {
