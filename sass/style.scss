@@ -83,37 +83,6 @@ body {
 	text-align: center;
 }
 
-//SEPARATOR
-
-.separator {
-	position: relative;
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	bottom: -10px;
-	left: 50%;
-	transform: translateX(-50%);
-	
-	&--top {
-		top: -12px;
-		
-		@media (max-width:966px) {
-			bottom: 200px;	
-		}
-	}
-	
-	&__item {
-		width: 20px;
-		height: 20px;
-		background: $color-second;
-		box-shadow: 0 0 0 6px white;
-		transform: translateX(-50%);
-		transform: rotate(45deg);
-		margin-right: 21px;
-	}
-}
-
-
 //HEADER
 
 .menu-toggle {
@@ -391,7 +360,6 @@ body {
 	
 	&__title-h1 {
 		@include title1;
-		// padding-bottom: 40px;
 	}
 	
 	&__box-text {
@@ -407,6 +375,7 @@ body {
 }
 
 //TECHNOLOGIES
+
 .technologies {
 	position: relative;
 	color: $color-third;
@@ -414,13 +383,6 @@ body {
 	
 	&__title-h1 {
 		@include title1;
-	}
-	
-	&__title-h2 {
-		font-size: 22px;
-		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 30px;
 	}
 	
 	&__container {
@@ -464,15 +426,14 @@ body {
 		}
 	}
 	
-	&__title-icon {}
 }
 
 //PROJECTS
+
 .projects {
 	position: relative;
 	padding: $padding;
-	color: $color-primary;
-	background: #000010;
+	color: $color-third;
 
 	&__title-h1 {
 		@include title1;
