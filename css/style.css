@@ -674,6 +674,7 @@ body {
   position: relative;
   color: #1D1D2C;
   padding: 120px 0 20px 0;
+  padding-bottom: 60px;
 }
 
 .contact__title-h1 {
@@ -723,6 +724,7 @@ body {
 .contact__info {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  font-weight: 400;
   padding: 10px 0;
   color: #E40C2B;
 }
@@ -743,7 +745,6 @@ body {
 }
 
 .contact__box-icon:hover {
-  border-color: #E40C2B;
   transition: 0.5s;
 }
 
@@ -751,6 +752,10 @@ body {
   .contact__box-icon:hover {
     border-color: #1D1D2C;
   }
+}
+
+.contact__link {
+  outline: none;
 }
 
 .footer {
@@ -761,6 +766,29 @@ body {
 .footer__text {
   text-align: center;
   text-size: 14px;
+  color: #F7F4E9;
+}
+
+.footer__link {
+  font-weight: 400;
+  color: #E40C2B;
+  margin-left: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  transition: 0.5s;
+}
+
+.footer__link:hover {
+  border: 1px solid #E40C2B;
+  padding: 5px 10px;
+}
+
+.footer__link:focus {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  background-color: #E40C2B;
   color: #F7F4E9;
 }
 

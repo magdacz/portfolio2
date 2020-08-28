@@ -324,7 +324,6 @@ body {
 		transition: 0.5s;
 		
 		&:hover {
-			
 			@media (max-width: 966px) {
 			border-color: $color-primary;
 		}
@@ -651,13 +650,12 @@ body {
 	position: relative;
 	color: $color-third;
 	padding: $padding;
+	padding-bottom: 60px;
 	
 	&__title-h1 {
 		@include title1;
 		padding-bottom: 40px;
 	}
-	
-	&__container {}
 	
 	&__box {
 		max-width: 400px;
@@ -671,7 +669,6 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		
 	}
 	
 	&__icon {
@@ -687,15 +684,12 @@ body {
 			&:hover {
 				transform: rotateY(360deg);
 			}
-		
 		}
 	}
 		
-	&__desc {
-		}
-		
 	&__info {
 			flex-basis: 100%;
+			font-weight: 400;
 			padding: 10px 0;
 			color: $color-second;
 		}
@@ -710,7 +704,6 @@ body {
 		border-radius: 50%;
 		
 		&:hover {
-			border-color: $color-second;
 			transition: 0.5s;
 			
 				@media (max-width: 966px) {
@@ -720,6 +713,7 @@ body {
 	}
 	
 	&__link {
+		outline: none;
 	}
 }
 
@@ -732,6 +726,31 @@ body {
 		text-align: center;
 		text-size: 14px;
 		color: $color-primary;
+	}
+
+	&__link {
+		font-weight: 400;
+		color: $color-second;
+		margin-left: 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+		outline: none;
+		transition: 0.5s;
+	
+		&:hover {
+			border: 1px solid $color-second;
+			padding: 5px 10px;
+		}
+	
+		&:focus {
+			// border: 1px solid $color-second;
+			padding: 5px 10px;
+			border-radius: 5px;
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+			background-color: $color-second;
+			color: $color-primary;
+		}
+	
 	}
 }
 
