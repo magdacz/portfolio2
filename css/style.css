@@ -46,6 +46,11 @@ body {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
 }
 
+.title-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
 .separator {
   position: relative;
   position: absolute;
@@ -380,17 +385,17 @@ body {
 
 .about-me {
   position: relative;
-  background: #7A7A7A;
-  color: #F7F4E9;
-  padding: 100px 0;
-  z-index: -1;
+  color: #1D1D2C;
+  padding: 120px 0 20px 0;
 }
 
 .about-me__title-h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
   text-align: center;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding-bottom: 40px;
+  color: #E40C2B;
+  padding-bottom: 80px;
 }
 
 .about-me__box-text {
@@ -407,13 +412,16 @@ body {
 .technologies {
   position: relative;
   color: #1D1D2C;
-  padding: 100px 0;
+  padding: 120px 0 20px 0;
 }
 
 .technologies__title-h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
   text-align: center;
-  font-size: 30px;
-  text-transform: uppercase;
+  color: #E40C2B;
+  padding-bottom: 80px;
 }
 
 .technologies__title-h2 {
@@ -469,15 +477,18 @@ body {
 
 .projects {
   position: relative;
-  padding: 100px 0;
+  padding: 120px 0 20px 0;
   color: #F7F4E9;
   background: #000010;
 }
 
 .projects__title-h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
   text-align: center;
-  font-size: 30px;
-  text-transform: uppercase;
+  color: #E40C2B;
+  padding-bottom: 80px;
   padding-bottom: 40px;
 }
 
@@ -689,13 +700,16 @@ body {
 .contact {
   position: relative;
   color: #1D1D2C;
-  padding: 100px 0;
+  padding: 120px 0 20px 0;
 }
 
 .contact__title-h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 45px;
   text-align: center;
-  font-size: 30px;
-  text-transform: uppercase;
+  color: #E40C2B;
+  padding-bottom: 80px;
   padding-bottom: 40px;
 }
 

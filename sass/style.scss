@@ -7,7 +7,7 @@ $color-third: #1D1D2C;
 
 $color-other: #878888;
 
-$padding: 100px 0;
+$padding: 120px 0 20px 0;
 
 @mixin flex-center {
     display: flex;
@@ -16,9 +16,12 @@ $padding: 100px 0;
 }
 
 @mixin title1 {
+	position: relative;
+	display: inline-block;
+	font-size: 45px;
 	text-align: center;
-	font-size: 30px;
-    text-transform: uppercase;
+	color: $color-second;
+	padding-bottom: 80px;
 }
 
 
@@ -73,6 +76,11 @@ body {
 			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
 		}
 	}
+}
+
+.title-wrapper {
+	width: 100%;
+	text-align: center;
 }
 
 //SEPARATOR
@@ -361,11 +369,6 @@ body {
 	&__link-git {
 		padding: 5px;
 		outline: none;
-
-		// &:focus {
-		// 	padding: 15px;
-		// 	border-radius: 5px;		
-		// }
 	}
 	
 	&__icon-git {
@@ -380,19 +383,15 @@ body {
 }
 
 //ABOUT ME
+
 .about-me {
 	position: relative;
-	background: #7A7A7A;
-	color: $color-primary;
+	color: $color-third;
 	padding: $padding;
-	z-index: -1;
 	
 	&__title-h1 {
 		@include title1;
-		padding-bottom: 40px;
-	}
-	
-	&__container {
+		// padding-bottom: 40px;
 	}
 	
 	&__box-text {
