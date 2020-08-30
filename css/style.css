@@ -12,6 +12,7 @@ html, body {
 body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
+  color: #1D1D2C;
 }
 
 .body-wrapper {
@@ -62,10 +63,8 @@ body {
   background-color: #E40C2B;
 }
 
-.circle-top {
+.circle {
   position: absolute;
-  top: -100px;
-  right: -50px;
   width: 400px;
   height: 400px;
   background-color: #E40C2B;
@@ -74,16 +73,14 @@ body {
   z-index: -1;
 }
 
-.circle-bottom {
-  position: absolute;
+.top {
+  top: -100px;
+  right: -50px;
+}
+
+.bottom {
   left: -180px;
   bottom: 0px;
-  width: 400px;
-  height: 400px;
-  background-color: #E40C2B;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  z-index: -1;
 }
 
 .menu-toggle {
@@ -388,7 +385,6 @@ body {
 
 .about-me {
   position: relative;
-  color: #1D1D2C;
   padding: 120px 0 20px 0;
 }
 
@@ -415,7 +411,6 @@ body {
 
 .technologies {
   position: relative;
-  color: #1D1D2C;
   padding: 120px 0 20px 0;
 }
 
@@ -476,7 +471,6 @@ body {
 .projects {
   position: relative;
   padding: 120px 0 20px 0;
-  color: #1D1D2C;
 }
 
 .projects__title-h1 {
@@ -710,7 +704,6 @@ body {
 
 .contact {
   position: relative;
-  color: #1D1D2C;
   padding: 120px 0 20px 0;
   padding-bottom: 60px;
 }
@@ -779,18 +772,8 @@ body {
   height: 55px;
   margin: auto;
   margin-top: 20px;
-  border: 2px solid black;
+  border: 2px solid #1D1D2C;
   border-radius: 50%;
-}
-
-.contact__box-icon:hover {
-  transition: 0.5s;
-}
-
-@media (max-width: 966px) {
-  .contact__box-icon:hover {
-    border-color: #1D1D2C;
-  }
 }
 
 .contact__link {
@@ -804,7 +787,6 @@ body {
 
 .footer__text {
   text-align: center;
-  text-size: 14px;
   color: #F7F4E9;
 }
 
@@ -820,7 +802,8 @@ body {
 
 .footer__link:hover {
   border: 1px solid #E40C2B;
-  padding: 5px 10px;
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
 .footer__link:focus {
