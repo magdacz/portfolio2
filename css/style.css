@@ -268,18 +268,16 @@ body {
   .header__box-slogan {
     width: auto;
     padding: 20px 25px;
-    background: rgba(0, 0, 0, 0.8);
   }
 }
 
-@media (max-width: 996px) {
+@media (max-width: 970px) {
   .header__box-slogan {
-    top: 60%;
-    transform: translate(-50%, -60%);
+    bottom: 50px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .header__box-slogan {
     top: 60%;
     transform: translate(-50%, -60%);
@@ -362,9 +360,9 @@ body {
   }
 }
 
-@media (max-width: 966px) {
+@media (max-width: 970px) {
   .header__box-icon {
-    margin-top: 10px;
+    margin-top: 30px;
   }
 }
 
