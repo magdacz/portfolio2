@@ -9,6 +9,10 @@ $color-third: #1D1D2C;
 
 $padding: 120px 0 20px 0;
 
+@media (max-width:767px) {
+	$padding: 50px 0 20px 0;
+}
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -18,11 +22,15 @@ $padding: 120px 0 20px 0;
 @mixin title1 {
 	position: relative;
 	display: inline-block;
-	font-size: 45px;
+	font-size: 40px;
 	text-align: center;
 	color: $color-second;
 	padding-bottom: 80px;
 	text-transform: uppercase;
+
+	@media (max-width: 640px) {
+		font-size: 34px;
+	}
 }
 
 * {
@@ -55,6 +63,12 @@ body {
 	margin: 100px auto 70px;
 	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 	overflow: hidden;
+
+	@media (max-width: 575px) {
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	 }
 }
 
 .container {
@@ -184,6 +198,10 @@ body {
 	height: 80vh;
 	background: $color-third;
 	text-transform: uppercase;
+
+	@media (max-width: 575px) {
+		height: 100vh;
+	 }
 	
 	&__menu {
 		padding: 10px 0;
@@ -309,7 +327,7 @@ body {
 			font-size: 55px;
 		}
 		
-		@media (max-width: 768px) {
+		@media (max-width: 820px) {
 			font-size: 45px;
 		}
 		
@@ -355,10 +373,26 @@ body {
 			border-color: $color-primary;
 			}
 		}
+
+
+		@media (max-width: 575px) {
+			margin-top: 5px;
+		}
+
+
+		// @media (max-width: 768px) {
+		// 	border: 1px solid gold;
+		// }
+		
+		// @media (max-width: 640px) {
+		// 	border: 1px solid green;
+		// }
+
 		
 		@media (max-width: 970px) {
 			margin-top: 30px;
 		}
+
 	}
 	
 	&__link-git {
@@ -412,7 +446,7 @@ body {
 	&__container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		padding: 20px;
 	}
 	
@@ -666,6 +700,12 @@ body {
 			background-color: $color-second;
 			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
 		}
+
+		&:hover {
+			color: $color-primary;
+			background-color: $color-second;
+			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+		}
 	}
 }
 
@@ -677,7 +717,6 @@ body {
 	
 	&__title-h1 {
 		@include title1;
-		padding-bottom: 40px;
 	}
 	
 	&__box {
@@ -712,7 +751,7 @@ body {
 		
 	&__info {
 			flex-basis: 100%;
-			font-weight: 400;
+			// font-weight: 400;
 			padding: 10px 0;
 			color: $color-second;
 		}
@@ -743,18 +782,16 @@ body {
 	}
 
 	&__link {
-		font-weight: 400;
+		font-weight: 600;
 		color: $color-second;
 		margin-left: 10px;
 		text-decoration: none;
 		text-transform: uppercase;
 		outline: none;
 		transition: 0.5s;
-	
-		&:hover {
-			border: 1px solid $color-second;
-			border-radius: 4px;
-			padding: 4px 8px;
+
+		@media(max-width: 455px) {
+			margin-top: 25px;
 		}
 	
 		&:focus {
@@ -783,6 +820,10 @@ body {
     transition: .5s;
     outline: none;
 	cursor: pointer;
+
+	@media (max-width:966px) {
+		right: 60px;
+	}
 	
 	&:focus {
 		box-shadow: 5px 5px 8px #777;
