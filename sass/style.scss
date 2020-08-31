@@ -83,7 +83,11 @@ body {
 
 .container {
     width: 70%;
-    margin: auto;
+	margin: auto;
+	
+	@media(max-width:470px) {
+		width: 90%;
+	}
 }
 
 .git-wrapper {
@@ -512,6 +516,12 @@ body {
 		&:hover {
 			box-shadow: 16px 16px 16px #777;
 		}
+
+		// 
+
+		@media(max-width: 470px) {
+			width: 90%;
+		}
 	}
 	
 	&__box-img {
@@ -524,6 +534,11 @@ body {
 		
 		&:hover {
 			background: $color-primary;
+		}
+
+		@media(max-width: 470px) {
+			width: 100%;
+			height: auto;
 		}
 		
 		 &:hover::before {
@@ -826,6 +841,10 @@ body {
 
 	@media (max-width:767px) {
 		right: 40px;
+	}
+
+	@media (max-width: 575px) {
+		bottom: 65px;
 	}
 	
 	&:focus {
