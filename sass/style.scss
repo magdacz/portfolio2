@@ -7,11 +7,8 @@ $color-third: #1D1D2C;
 
 // $color-other: #878888;
 
-$padding: 120px 0 20px 0;
+// $padding: 120px 0 20px 0;
 
-@media (max-width:767px) {
-	$padding: 50px 0 20px 0;
-}
 
 @mixin flex-center {
     display: flex;
@@ -64,11 +61,24 @@ body {
 	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 	overflow: hidden;
 
+	@media (max-width: 767px) {
+		margin: 70px auto 50px;
+	 }
+
 	@media (max-width: 575px) {
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	 }
+}
+
+.section {
+	position: relative;
+	padding: 120px 0 20px 0;
+
+	@media(max-width:767px) {
+		padding: 80px 0 20px 0;
+	}
 }
 
 .container {
@@ -83,7 +93,7 @@ body {
 
 		&:focus {
 			padding: 15px;
-			border: 2px solid $color-second;
+			border: 2px solid $color-primary;
 			border-radius: 50%;
 			transform: scale(1.1);
 			box-shadow: 0 5px 8px rgba(0,0,0,0.4);
@@ -114,7 +124,7 @@ body {
 	background-color: $color-second;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 	border-radius: 50%;
-    z-index: -1;
+	z-index: -1;
 }
 
 .top {
@@ -144,7 +154,7 @@ body {
 	outline: none;
 
 	&:focus {
-		border: 1px solid $color-second;
+		border: 1px solid $color-primary;
 		border-radius: 5px;
 		box-shadow: 0 5px 8px rgba(0,0,0,0.4);
 	}
@@ -374,21 +384,10 @@ body {
 			}
 		}
 
-
 		@media (max-width: 575px) {
 			margin-top: 5px;
 		}
 
-
-		// @media (max-width: 768px) {
-		// 	border: 1px solid gold;
-		// }
-		
-		// @media (max-width: 640px) {
-		// 	border: 1px solid green;
-		// }
-
-		
 		@media (max-width: 970px) {
 			margin-top: 30px;
 		}
@@ -414,8 +413,8 @@ body {
 //ABOUT ME
 
 .about-me {
-	position: relative;
-	padding: $padding;
+	// position: relative;
+	// padding: $padding;
 	
 	&__title-h1 {
 		@include title1;
@@ -436,8 +435,8 @@ body {
 //TECHNOLOGIES
 
 .technologies {
-	position: relative;
-	padding: $padding;
+	// position: relative;
+	// padding: $padding;
 	
 	&__title-h1 {
 		@include title1;
@@ -489,8 +488,8 @@ body {
 //PROJECTS
 
 .projects {
-	position: relative;
-	padding: $padding;
+	// position: relative;
+	// padding: $padding;
 
 	&__title-h1 {
 		@include title1;
@@ -711,8 +710,8 @@ body {
 
 //CONTACT
 .contact {
-	position: relative;
-	padding: $padding;
+	// position: relative;
+	// padding: $padding;
 	padding-bottom: 60px;
 	
 	&__title-h1 {
@@ -823,6 +822,10 @@ body {
 
 	@media (max-width:966px) {
 		right: 60px;
+	}
+
+	@media (max-width:767px) {
+		right: 40px;
 	}
 	
 	&:focus {
