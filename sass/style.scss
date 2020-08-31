@@ -5,11 +5,6 @@ $color-second: #E40C2B;
 $color-third: #1D1D2C;
 // $color-second: #3CBCC3;;
 
-// $color-other: #878888;
-
-// $padding: 120px 0 20px 0;
-
-
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -417,8 +412,6 @@ body {
 //ABOUT ME
 
 .about-me {
-	// position: relative;
-	// padding: $padding;
 	
 	&__title-h1 {
 		@include title1;
@@ -439,8 +432,6 @@ body {
 //TECHNOLOGIES
 
 .technologies {
-	// position: relative;
-	// padding: $padding;
 	
 	&__title-h1 {
 		@include title1;
@@ -492,8 +483,6 @@ body {
 //PROJECTS
 
 .projects {
-	// position: relative;
-	// padding: $padding;
 
 	&__title-h1 {
 		@include title1;
@@ -517,7 +506,6 @@ body {
 			box-shadow: 16px 16px 16px #777;
 		}
 
-		// 
 
 		@media(max-width: 470px) {
 			width: 90%;
@@ -724,9 +712,9 @@ body {
 }
 
 //CONTACT
+
 .contact {
-	// position: relative;
-	// padding: $padding;
+
 	padding-bottom: 60px;
 	
 	&__title-h1 {
@@ -765,7 +753,6 @@ body {
 		
 	&__info {
 			flex-basis: 100%;
-			// font-weight: 400;
 			padding: 10px 0;
 			color: $color-second;
 		}
@@ -786,6 +773,7 @@ body {
 }
 
 //FOOTER
+
 .footer {
 	background: $color-third;
 	padding: 20px;
